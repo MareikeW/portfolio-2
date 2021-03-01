@@ -1,0 +1,87 @@
+:root {
+    --violet: rgb(184, 0, 245);
+    --lavendel: rgb(219, 112, 255);
+    --grün: rgb(61, 245, 00);
+    --hellgrün: rgb(229, 255, 204);
+    --weiß: rgb(255, 255, 255);
+    --schwarz: rgb(0, 0, 0);
+    ) 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+button:hover,
+button:focus {
+    cursor: pointer;
+}
+
+/* Header */
+header {
+    background-color: var(--violet);
+}
+
+.logo {
+    padding: 1em;
+    font-size: 1.8em;
+    position: relative;
+    letter-spacing: 7px;
+    font-weight: 600;
+}
+
+.logo::after {
+    content: "";
+    height: 1.3em;
+    width: 2px;
+    background-color: var(--grün);
+    position: absolute;
+    top: 1em;
+    left: 1.9em;
+}
+
+nav {
+    display: none;
+}
+
+/* Hero */
+.hero {
+    background-color: var(--violet);
+    color: var(--weiß);
+    padding: 1em;
+}
+
+.hero p {
+    text-indent: 4em;
+    letter-spacing: 1px;
+}
+
+.hero img {
+    width: 300px;
+    display: block;
+    margin: 1em auto;
+    
+}
+
+.hero button {
+    background-color: var(--grün);
+    border: none;
+    padding: 1em 1.2em;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--schwarz);
+}
+
+.hero--button {
+    text-align: center;
+    margin: 1em;
+}
+
