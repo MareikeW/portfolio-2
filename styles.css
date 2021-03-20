@@ -2,7 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito', sans-serif; 
+}
+
+body {
+    padding: 1em;
 }
 
 /* Typographie */
@@ -34,7 +38,6 @@ p {
 }
 
 .hero-container {
-    padding: 1em;
     display: flex;
     flex-direction: column;
 }
@@ -145,7 +148,6 @@ p {
 /* Über */
 .uber-section,
 .skills-section {
-    padding: 1em; 
     max-width: 800px;
     margin: 0 auto;  
 }
@@ -216,4 +218,63 @@ p {
 
 .zertifikat:last-of-type {
     margin-bottom: 3em;
+}
+
+
+/* Projekte */
+.projekte-section {
+    text-align: center;
+}
+
+.projekte-section h1 {
+    font-size: 3em;
+}
+
+.projekte-item {
+    margin-bottom: 2em;
+}
+
+.projekte-item img {
+    width: 100%;
+    max-width: 650px;
+}
+
+.projekte-item h3,
+.projekte-item p {
+    text-align: left;
+}
+
+.projekte-item h3 {
+    font-size: 2em;
+}
+
+@media (min-width: 800px) {
+    .projekte-section {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .projekte-item {
+        display: grid;
+        grid-template-areas: 
+        "image heading"
+        "image text"
+        "image text"
+        "image text";
+        column-gap: 20px;
+        margin-top: 3em;
+
+    }
+
+    .projekte-item img {
+        width: 400px;
+        grid-area: image;
+    }
+    
+    .projekte-item h3 {
+        grid-area: heading;
+    }
+
+    .projekte-item p {
+        grid-area: text;
+    }
 }
