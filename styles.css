@@ -5,7 +5,7 @@
     font-family: 'Nunito', sans-serif; 
 }
 
-body {
+.body {
     padding: 1em;
 }
 
@@ -93,7 +93,6 @@ header a {
 }
 
 @media (min-width: 600px) {
-
     .hero-section {
         height: 100vh;
         display: flex;
@@ -300,5 +299,61 @@ header a {
 
     .projekte-item p {
         grid-area: text;
+    }
+}
+
+/* Projektseiten */
+main * {
+    max-width: 800px;
+    margin: 1em auto;
+    margin-bottom: 1em;
+}
+
+main h1 {
+    margin-bottom: 0;
+}
+
+ol, ul {
+    list-style-position: inside;
+}
+
+article {
+    border-top:rgba(125, 19, 109, 0.8) solid 1px;
+}
+
+.projekt-img-hero {
+    max-width: 100%;
+    padding: 1em;
+}
+
+.projekt-button-container {
+    text-align: center;
+}
+
+.projekt-button-container button {
+    width: 200px;
+    padding: 1em;
+    margin-right: 1em;
+    border: none;
+    background-color: rgba(125, 19, 109, 0.8);
+    color: #fff;
+    font-size: 18px;
+    border: #fff solid 2px;
+}
+
+.projekt-button-container button:hover,
+.projekt-button-container button:focus {
+    cursor: pointer;
+    border: solid 2px #000;
+}
+
+@media (min-width: 600px) {
+    .projekt-img-container {
+        text-align: center;
+        
+    }
+
+    .projekt-img-hero {
+        width: 600px;
     }
 }

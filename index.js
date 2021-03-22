@@ -10,3 +10,5 @@ heroSection.addEventListener("click", function change() {
         heroMenu.style.display = "block";
     }
 })
+
+

@@ -6,18 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <title>Projekt: Finanzrechner</title>
 </head>
-<body>
+<body class="body">
     <header>
-        <a href="./index.html">
+        <a href="../index.html">
             M<span></span>W
         </a>
     </header>
     <main>
         <h1>Projekt: Finanzrechner</h1>
-        <p>Intro: Das Thema Finanzen interessiert mich schon seit längerem. Aus diesem Grund habe ich diese Webseite mit drei Tool für die Finanzplanung erstellt: Sparrechner, Zinsrechner und Budgetplaner.
+        <div class="projekt-img-container">
+            <img src="../images/finanzrechner_desktop.PNG" alt="Screenshot vom Rechner für einmalige Anlagen." class="projekt-img-hero">
+        </div>
+
+        <div class="projekt-button-container">
+            <button onclick="openProjektWindow()" type="button">Webseite</button>
+            <button onclick="openGithubWindow()" type="button">Webseite</button>
+        </div>
+
+        <p>Das Thema Finanzen interessiert mich schon seit längerem. Aus diesem Grund habe ich diese Webseite mit drei Tool für die Finanzplanung erstellt: Sparrechner, Zinsrechner und Budgetplaner.
         </p>
 
         <article>
@@ -36,7 +45,55 @@
                 Budgetplaner: Nutzer können hier ihr monatliches Budget erstellen. Der Planer wird unterteilt in Einnahmen und Ausgaben, wobei die Ausgaben noch einmal in sechs Unterkategorien wie Wohnen und Transport aufgeteilt sind. Nach Eingabebestätigung wird die Differenz der Einnahmen und Ausgaben angezeigt sowie die Möglichkeit gegeben, die Auflistung auszudrucken.
             </li>
         </ol>
-        </article>   
+        </article>
+        
+        <article>
+            <h3>Tech Stack</h3>
+            <p>HTML5, CSS3, JavaScript, Chart.js-Bibliothek</p>
+            <p>
+                Chart.js-Bibliothek:
+                <ul>
+                    <li>Einfacher Weg Graphen in einem Projekt zu erstellen</li>
+                    <li>Open Source</li>
+                    <li>Diagramm wird auf einem HTML5 &lt;canvas&gt; dargestellt</li>
+                    <li>responsive</li>
+                    <li>7 Diagrammtypen: Linien-, Balken-, Radar-, Donut-/Torten-, Polar Area-, Blasen- und Streudiagramm</li>
+                </ul>
+            </p>
+        </article>
+
+        <article>
+            <h3>Schwierigkeiten und Lösungen</h3>
+            <ol>
+                <li>Verknüpfung vom Rechner mit dem Diagramm: Eine große Schwierigkeit bestand darin, das Array mit den neu berechneten 
+                    Werten für jedes Jahr zu füllen und aus diesem dann ein Diagramm zu erstellen und anzuzeigen. Sowohl in der 
+                    Dokumentation von Chart.js als auch auf Stackoverflow oder in YouTube-Tutorials wurde diese Art von Verknüpfung nicht 
+                    beschrieben. Es wurden lediglich mit initialisierten Arrays gearbeitet, die schon definierte Elemente enthielten. 
+                    Um dieses Problem zu lösen, habe ich dann überlegt, wie man nun vorgehen soll. Man braucht auf jeden Fall zwei Arrays, 
+                    einmal für die Jahre (arrJahre) und einmal für das Endkapital (arrWerte) des jeweiligen Jahres. Mittels einer 
+                    for-Schleife werden dann diese Arrays mit den errechneten Werten befüllt. Im Anschluss daran werden die Elemente der 
+                    Arrays mittels einer zweiten for-Schleife der X- und Y-Achse im Diagramm zugewiesen.</li>
+                <li>Magische Zahlen: Für diese Webseite musste man natürlich mehrere Kalkulationen programmieren. Dabei kam es mehrmals 
+                    vor, dass ich beispielsweise eine for-Schleife geschrieben habe und ein oder mehrere Tage später nicht mehr genau 
+                    wusste, für was die einzelnen Zahlen standen. Zur selben Zeit habe ich einen Kurs in Clean Code absolviert, in dem viel 
+                    Wert auf beschreibende Namen für Variablen, etc. gelegt wurde. Auch auf die sog. magischen Zahlen wurde eingegangen, 
+                    d. h. Zahlen deren Bedeutung nicht auf Anhieb erkennbar ist. Ich konnte allen Zahlen dann schließlich einen beschreibenden 
+                    Namen geben, allerdings war eine magische Zahl (6.5) dabei. Sie wird im Sparrechner für die Berechnung des Endkapital mit 
+                    einer monatlichen Sparrate gebraucht.</li>
+            </ol>
+        </article>
     </main>
+
+    <script>
+        function openProjektWindow() {
+            window.open('https://finanzrechner.netlify.app/');
+            return false;
+        }
+
+        function openGithubWindow() {
+            window.open('https://github.com/MareikeW/calculator-for-finances');
+            return false;
+        }
+    </script>
 </body>
 </html>
