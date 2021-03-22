@@ -61,6 +61,15 @@ header a {
     flex-direction: column;
 }
 
+.hero-intro span {
+    display: block;
+}
+
+.hero-menu span:hover,
+.hero-menu span:focus {
+    color: #000;
+}
+
 .hero-container img {
     width: 300px; 
     border-radius: 50px;
@@ -82,7 +91,15 @@ header a {
     line-height: 100px;
     letter-spacing: -0.8px;
     font-weight: 700;
-    display: none;
+    opacity: 0;
+}
+
+.hero-menu.transitioned {
+    transition: 2s;
+    transition-timing-function: ease-in;
+    color: #fff;
+    opacity: 1;
+    font-size: 100px;
 }
 
 .click {
@@ -155,6 +172,21 @@ header a {
         font-size: 100px;
         line-height: 120px;
         padding-top: 0;
+    }
+
+    .hero-container img {
+        height: 480px;
+    }
+
+    .hero-menu {
+        width: 400px;
+        padding-bottom: 0;
+        font-size: 95px;
+    }
+
+    .hero-menu * {
+        padding: 0;
+        margin: 0;
     }
 
     .hero-intro {
@@ -345,6 +377,25 @@ article {
 .projekt-button-container button:focus {
     cursor: pointer;
     border: solid 2px #000;
+}
+
+.purple-arrow  {
+    transform: rotate(90deg);
+    width: 30px;
+    margin-left: 0;
+}
+
+.arrow-description {
+    display: flex;
+    max-width: 250px;
+    margin-left: 0;
+    font-size: 18px;
+}
+
+.arrow-description span {
+    padding-top: 4px;
+    width: 100%;
+    padding-left: 5px;
 }
 
 @media (min-width: 600px) {

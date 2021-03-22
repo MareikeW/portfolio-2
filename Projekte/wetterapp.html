@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Projekt: Wetter-App</title>
+</head>
+<body class="body">
+    <header>
+        <a href="../index.html">
+            M<span></span>W
+        </a>
+    </header>
+    <main>
+        <h1>Projekt: Wetter-App</h1>
+        <div class="projekt-img-container">
+            <img src="../images/Desktop_WetterApp.PNG" alt="Screenshot vom Rechner für einmalige Anlagen." class="projekt-img-hero">
+        </div>
+
+        <div class="projekt-button-container">
+            <button onclick="openProjektWindow()" type="button">Webseite</button>
+            <button onclick="openGithubWindow()" type="button">Github</button>
+        </div>
+
+        <p>Mit dieser Webapplikation kann nach dem aktuellen Wetter von mehr als 200.000 Orten gesucht werden. Für die Umsetzung des Projekts 
+            habe ich die OpenWeatherMap API und die React-Library benutzt.
+        </p>
+
+        <article>
+        <h3>Beschreibung</h3>
+        <p>
+            Mit dieser Webapplikation kann nach dem aktuellen Wetter von mehr als 200.000 Orten gesucht werden. Sobald die Webseite geladen wurde und sie Zugriff auf den aktuellen Standort des Nutzers hat, wird dessen Ort automatisch als Ausgangspunkt gewählt.
+        </p>
+
+        <p>Über ein Eingabefeld lässt sich nach einer anderen Stadt suchen. Bei einer positiven Suche werden die folgenden Angaben unter dem Suchfeld dargestellt:</p>
+        
+        <ul>
+            <li>Ort, Land
+            </li>
+            <li>
+                Wochentag, Datum
+            </li>
+            <li>
+                aktuelle Temperatur, gefühlte Temperatur
+            </li>
+            <li>
+                Wetterbeschreibung, passendes Icon
+            </li>
+        </ul>
+        </article>
+        
+        <article>
+            <h3>Tech Stack</h3>
+            <p>HTML5, CSS3, JavaScript, React, OpenWeatherMap API</p>
+            <p>
+                <div class="arrow-description">
+                    <img src="https://img.icons8.com/fluent/48/000000/long-arrow-up.png" class="purple-arrow"/>
+                    <span>OpenWeatherMap API:</span>
+                </div>
+                <ul>
+                    <li>Wettervorhersagen in über 40 Sprachen</li>
+                    <li>Wetterdaten von über 200.000 Orten auf der Welt</li>
+                    <li>Informationen zu Temperatur, Windstärke, Sonnenaufgang und -untergang, etc.</li>
+                </ul>
+            </p>
+        </article>
+
+        <article>
+            <h3>Schwierigkeiten und Lösungen</h3>
+            <ol>
+                <li><strong>React ins Projekt integrieren:</strong> Dokumentation von ReactJS und VisualStudioCode</li>
+                <li><strong>Zu großer Codeblock (Anzeige durch CodeMetrics Extension in VSC):</strong> Unterteilung in verschiedene 
+                    Komponenten und einen Context angelegt, um die Zustände query und wetter an mehrere Komponenten 
+                    weiterzugeben. Normalerweise wird die Context API laut der ReactJS-Dokumentation für das Teilen von 
+                    beispielsweise Themes oder den derzeitigen authentifizierten Nutzer an verschiedene Komponenten im Hierarchie-Baum. 
+                    Auslöser für meine Wahl hier war, dass ich erst kurz vor Start des Projekts einen Kurs zu React absolviert hatte. 
+                    Der Abschnitt zur Context API hat mir dabei am meisten gefallen und ich wollte sie deshalb gleich einmal in einem 
+                    eigenen Projekt ausprobieren.</li>
+                <li><strong>Aktuelle Position des Nutzers finden:</strong> geolocation-API</li>
+                <li><strong>Daten von der OpenWeatherMap API abrufen:</strong> fetch-API</li>
+                <li><strong>Wettercontainer ausblenden, wenn keine Wetterdaten vorhanden sind:</strong> Dieser Fall tritt immer ein, 
+                    wenn der Nutzer die Zugriffserlaubnis auf seinen aktuellen Standort (noch) nicht akzeptiert hat. </li>
+            </ol>
+        </article>
+    </main>
+
+    <script>
+        function openProjektWindow() {
+            window.open('https://aktuelles-wetter-app.netlify.app/');
+            return false;
+        }
+
+        function openGithubWindow() {
+            window.open('https://github.com/MareikeW/wetterapp');
+            return false;
+        }
+    </script>
+</body>
+</html>

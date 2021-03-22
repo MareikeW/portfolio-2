@@ -23,7 +23,7 @@
 
         <div class="projekt-button-container">
             <button onclick="openProjektWindow()" type="button">Webseite</button>
-            <button onclick="openGithubWindow()" type="button">Webseite</button>
+            <button onclick="openGithubWindow()" type="button">Github</button>
         </div>
 
         <p>Das Thema Finanzen interessiert mich schon seit längerem. Aus diesem Grund habe ich diese Webseite mit drei Tool für die Finanzplanung erstellt: Sparrechner, Zinsrechner und Budgetplaner.
@@ -36,13 +36,13 @@
         </p>
         
         <ol>
-            <li>Sparrechner: Ein Zinseszinsrechner für Guthabenzinsen auf Basis von Anfangskapital, Sparrate, Zinssatz, Ansparzeit in Jahren und Sparintervall. Das Intervall der Sparraten kann zwischen monatlich und jährlich gewählt werden. Anhand der eingegebenen Daten ermittelt der Sparrechner das zu erzielende Endkapital inklusive Zinsen. Außerdem werden die Gesamtbeträge von den Einzahlungen und Zinsen separat angezeigt. Ein Liniendiagramm zeigt den Verlauf der Guthabenentwicklung über die Jahre an.
+            <li><strong>Sparrechner:</strong> Ein Zinseszinsrechner für Guthabenzinsen auf Basis von Anfangskapital, Sparrate, Zinssatz, Ansparzeit in Jahren und Sparintervall. Das Intervall der Sparraten kann zwischen monatlich und jährlich gewählt werden. Anhand der eingegebenen Daten ermittelt der Sparrechner das zu erzielende Endkapital inklusive Zinsen. Außerdem werden die Gesamtbeträge von den Einzahlungen und Zinsen separat angezeigt. Ein Liniendiagramm zeigt den Verlauf der Guthabenentwicklung über die Jahre an.
             </li>
             <li>
-                Zinsrechner: Ebenfalls ein Zinseszinsrechner, jedoch für einmalige Anlagen. Zinsgutschriften werden dem angelegten Kapital gutgeschrieben und dementsprechend mitverzinst. In der Ergebnisübersicht werden die Gesamtzinsen sowie das Endkapital inkl. Zinsen angezeigt. Wie beim Sparrechner wird auch hier der Verlauf der Guthabenentwicklung in einem Liniendiagramm dargestellt.
+                <strong>Zinsrechner:</strong> Ebenfalls ein Zinseszinsrechner, jedoch für einmalige Anlagen. Zinsgutschriften werden dem angelegten Kapital gutgeschrieben und dementsprechend mitverzinst. In der Ergebnisübersicht werden die Gesamtzinsen sowie das Endkapital inkl. Zinsen angezeigt. Wie beim Sparrechner wird auch hier der Verlauf der Guthabenentwicklung in einem Liniendiagramm dargestellt.
             </li>
             <li>
-                Budgetplaner: Nutzer können hier ihr monatliches Budget erstellen. Der Planer wird unterteilt in Einnahmen und Ausgaben, wobei die Ausgaben noch einmal in sechs Unterkategorien wie Wohnen und Transport aufgeteilt sind. Nach Eingabebestätigung wird die Differenz der Einnahmen und Ausgaben angezeigt sowie die Möglichkeit gegeben, die Auflistung auszudrucken.
+                <strong>Budgetplaner:</strong> Nutzer können hier ihr monatliches Budget erstellen. Der Planer wird unterteilt in Einnahmen und Ausgaben, wobei die Ausgaben noch einmal in sechs Unterkategorien wie Wohnen und Transport aufgeteilt sind. Nach Eingabebestätigung wird die Differenz der Einnahmen und Ausgaben angezeigt sowie die Möglichkeit gegeben, die Auflistung auszudrucken.
             </li>
         </ol>
         </article>
@@ -51,7 +51,10 @@
             <h3>Tech Stack</h3>
             <p>HTML5, CSS3, JavaScript, Chart.js-Bibliothek</p>
             <p>
-                Chart.js-Bibliothek:
+                <div class="arrow-description">
+                    <img src="https://img.icons8.com/fluent/48/000000/long-arrow-up.png" class="purple-arrow"/>
+                    <span>Chart.js-Bibliothek:</span>
+                </div>
                 <ul>
                     <li>Einfacher Weg Graphen in einem Projekt zu erstellen</li>
                     <li>Open Source</li>
@@ -65,7 +68,7 @@
         <article>
             <h3>Schwierigkeiten und Lösungen</h3>
             <ol>
-                <li>Verknüpfung vom Rechner mit dem Diagramm: Eine große Schwierigkeit bestand darin, das Array mit den neu berechneten 
+                <li><strong>Verknüpfung vom Rechner mit dem Diagramm:</strong> Eine große Schwierigkeit bestand darin, das Array mit den neu berechneten 
                     Werten für jedes Jahr zu füllen und aus diesem dann ein Diagramm zu erstellen und anzuzeigen. Sowohl in der 
                     Dokumentation von Chart.js als auch auf Stackoverflow oder in YouTube-Tutorials wurde diese Art von Verknüpfung nicht 
                     beschrieben. Es wurden lediglich mit initialisierten Arrays gearbeitet, die schon definierte Elemente enthielten. 
@@ -73,7 +76,7 @@
                     einmal für die Jahre (arrJahre) und einmal für das Endkapital (arrWerte) des jeweiligen Jahres. Mittels einer 
                     for-Schleife werden dann diese Arrays mit den errechneten Werten befüllt. Im Anschluss daran werden die Elemente der 
                     Arrays mittels einer zweiten for-Schleife der X- und Y-Achse im Diagramm zugewiesen.</li>
-                <li>Magische Zahlen: Für diese Webseite musste man natürlich mehrere Kalkulationen programmieren. Dabei kam es mehrmals 
+                <li><strong>Magische Zahlen:</strong> Für diese Webseite musste man natürlich mehrere Kalkulationen programmieren. Dabei kam es mehrmals 
                     vor, dass ich beispielsweise eine for-Schleife geschrieben habe und ein oder mehrere Tage später nicht mehr genau 
                     wusste, für was die einzelnen Zahlen standen. Zur selben Zeit habe ich einen Kurs in Clean Code absolviert, in dem viel 
                     Wert auf beschreibende Namen für Variablen, etc. gelegt wurde. Auch auf die sog. magischen Zahlen wurde eingegangen, 
