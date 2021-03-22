@@ -29,6 +29,25 @@ p {
     font-size: 18px;
 }
 
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Logo */
+header {
+    font-size: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+header span {
+    border-right:rgba(125, 19, 109, 0.8) solid 3px;
+}
+
+header a {
+    color: #000;
+}
+
 /* Hero */
 .hero-section {
     background-color: rgba(125, 19, 109, 1);
@@ -55,7 +74,7 @@ p {
 }
 
 .hero-intro {
-    
+    display: block;
 }
 
 .hero-menu {
@@ -222,6 +241,10 @@ p {
 
 
 /* Projekte */
+#projekte-header {
+    max-width: 1000px;
+}
+
 .projekte-section {
     text-align: center;
 }
@@ -246,6 +269,7 @@ p {
 
 .projekte-item h3 {
     font-size: 2em;
+    color: #000;
 }
 
 @media (min-width: 800px) {
