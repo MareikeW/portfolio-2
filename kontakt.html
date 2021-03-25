@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
@@ -18,15 +20,13 @@
 
         <h2>Nimm gerne mit mir Kontakt auf :)</h2>
 
-        <form method="POST" name="contact-form" data-netlify="true">
+        <form method="POST" name="contact-form" data-netlify="true" class="message-form">
             <input type="text" placeholder="Name..." name="Name" required/>
             <input type="email" placeholder="E-Mail..." name="Email" required/>
-            <textarea placeholder="Deine Nachricht..." name="Nachricht" required>
+            <textarea name="Nachricht">Deine Nachricht...
             </textarea>
             <button type="submit">Abschicken</button>
         </form>
-
-        <img src="" alt="nach oben" />
     </section>
 </body>
 </html>
