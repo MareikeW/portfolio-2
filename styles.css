@@ -436,8 +436,7 @@ article {
 }
 
 .message-form * {
-    margin-top: 1em;
-    
+    margin-top: 1em;  
 }
 
 .message-form input {
@@ -464,4 +463,13 @@ article {
 .message-form button:focus {
     cursor: pointer;
     border: solid 2px #000;
+}
+
+.icons-list {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.icons-list a {
+    padding: 1em;
 }
