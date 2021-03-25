@@ -265,7 +265,8 @@ header a {
     border-top: solid 2px rgba(125, 19, 109, 0.8);
     margin-bottom: 0.8em;
     margin-top: 1em;
-    padding-bottom: 0.5em
+    padding-bottom: 0.5em;
+    color: #000;
 }
 
 .zertifikat-content {
