@@ -18,11 +18,10 @@
 
         <h2>Nimm gerne mit mir Kontakt auf :)</h2>
 
-        <form>
-            <input type="text" placeholder="Name..." />
-            <input type="email" placeholder="E-Mail..." />
-            <textarea>
-                Deine Nachricht...
+        <form method="POST" name="contact-form" data-netlify="true">
+            <input type="text" placeholder="Name..." name="Name" required/>
+            <input type="email" placeholder="E-Mail..." name="Email" required/>
+            <textarea placeholder="Deine Nachricht..." name="Nachricht" required>
             </textarea>
             <button type="submit">Abschicken</button>
         </form>
