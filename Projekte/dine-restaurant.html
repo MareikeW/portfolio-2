@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Projekt: Dine Restaurant</title>
+</head>
+<body class="body">
+    <header>
+        <a href="../index.html">
+            M<span></span>W
+        </a>
+    </header>
+    <main>
+        <h1>Projekt: Dine Restaurant</h1>
+        <div class="projekt-img-container">
+            <img src="../images/desktop_dine.PNG" alt="Screenshot von der Startseite des Dine Restaurants." class="projekt-img-hero">
+        </div>
+
+        <div class="projekt-button-container">
+            <button onclick="openProjektWindow()" type="button">Webseite</button>
+            <button onclick="openGithubWindow()" type="button">Github</button>
+        </div>
+
+        <p>Dieses Projekt ist meine Lösung zur <a href="https://www.frontendmentor.io/challenges/dine-restaurant-website-yAt7Vvxt7" target="_blank" class="link--black">Frontend-Mentor-Challenge</a>. 
+            Es ist eine zweiseitige Webseite für ein Restaurant. Neben der Startseite gibt es noch eine Reservierungsseite, mit Formular zum ausfüllen.
+        </p>
+
+        <article>
+        <h3>Beschreibung</h3>
+        <p>In dieser Challenge sollte man eine Webseite für ein Restaurant nach Designvorlage erstellen, die eine Startseite und Reservierungsseite beinhaltet.
+        Zum Anfang bekommt man von Frontend Mentor den Startercode, der die einzelnen Dateien wie homepage.html oder bookingpage.html enthält. Schon vorgegeben sind lediglich das HTML-Grundgerüst und der Text.
+        Weiter gibt es die verschiedenen Bilder für Handy-, Tablet- und Desktopversion sowie die Designvorlage in einer Figma-Datei.
+        </p>
+
+        <p>Die folgenden Anforderungen sollten am Ende erfüllt sein:</p>
+        
+        <ul>
+            <li>Optimales Layout für die jeweilige Bildschirmgröße (vorgegebene Breiten: 375px, 768px, 1440px).
+            </li>
+            <li>
+                Hoverstates für alle interaktiven Elemente
+            </li>
+            <li>
+                Nach Klick auf entsprechendes Element, Anzeige des dazugehörigen Events (Family Gathering, Special Events, Social Events)
+            </li>
+            <li>
+                Formularvalidieriung des Reservierungsformulars
+            </li>
+        </ul>
+        </article>
+        
+        <article>
+            <h3>Tech Stack</h3>
+            <p>HTML5, CSS3, JavaScript</p>
+        </article>
+
+        <article>
+            <h3>Schwierigkeiten und Lösungen</h3>
+            <ol>
+                <li><strong>Nutzung von Figma:</strong> Es war das erste Mal, dass ich mit dem Design-Tool Figma gearbeitet habe, weshalb ich mehr Zeit darin investieren musste, mich zurecht zu finden. 
+                Am meisten hat mir geholfen, einfach auf die verschiedenen Elemente der Designvorlagen zu klicken und zu schauen, was dann passiert. Auch Online-Tutorials waren hilfreich.</li>
+                <li><strong>Korrekte Reihenfolge von gestapelten Elementen:</strong> Sowohl auf der Startseite als auch auf der Reservierungsseite gibt es diese leicht transparenten graublauen Balken.
+                Drei Balken sollten soz. hinter Bildern geschichtet sein, war mir zuerst überhaupt nicht gelangt. Man konnte besonders die Balkenränder in den Bildern sehen. Ein Online-Artikel hat mir dann 
+                geholfen, das Problem zu lösen. Denn lediglich die Balken hatten ein Positionsattribut, was die Balken immer über den Bildern liegen ließ. Erst als ich auch zu den Bildern ein Positionsattribut gegeben hatte, 
+            konnte ich die korrekte Reihenfolge der beiden Elemente erzielen.</li>
+                <li><strong>Formularvalidierung:</strong> Ein einfacher und schneller Weg ein Formular auf Gültigkeit zu prüfen, ist in HTML das required-Attribut bei jedem Formelement hinzuzufügen.
+                Die Challenge verlangte allerdings, dass eine eigens kreierte Überprüfung stattfinden soll. Hier hatte ich mir dann überlegt, dass Ganze mit JavaScript umzusetzen und mit if-/else-Bedingungen zu arbeiten.
+                Die einzelnen Felder mussten natürlich bei ungültiger Eingabe rot markiert werden. Dies habe ich mit Klassenselektoren gelöst. Außerdem sollten noch Fehlermeldungen wie "This field is incomplete" angezeigt werden.
+            Dafür habe ich das Pseudoelement ::after eingesetzt, mit dem man einem Selektor ein zusätzliches Element geben kann. In diesem Fall den Inputfeldern bzw. Labeln.</li>
+            </ol>
+        </article>
+    </main>
+
+    <script>
+        function openProjektWindow() {
+            window.open('https://dine-restaurant1.netlify.app/');
+            return false;
+        }
+
+        function openGithubWindow() {
+            window.open('https://github.com/MareikeW/dine-restaurant-website');
+            return false;
+        }
+    </script>
+</body>
+</html>
