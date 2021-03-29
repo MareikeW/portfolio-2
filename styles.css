@@ -336,7 +336,6 @@ header a {
         "image text";
         column-gap: 20px;
         margin-top: 3em;
-
     }
 
     .projekte-item img {
@@ -384,7 +383,6 @@ article {
 .projekt-button-container button {
     width: 200px;
     padding: 1em;
-    margin-right: 1em;
     border: none;
     background-color: rgba(125, 19, 109, 0.8);
     color: #fff;
