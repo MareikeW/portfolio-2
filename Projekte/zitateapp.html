@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Projekt: Zitate-App</title>
+</head>
+<body class="body">
+    <header>
+        <a href="../index.html">
+            M<span></span>W
+        </a>
+    </header>
+    <main>
+        <h1>Projekt: Zitate-App</h1>
+        <div class="projekt-img-container">
+            <img src="../images/zitateapp.PNG" alt="Screenshot von der Startseite des Dine Restaurants." class="projekt-img-hero">
+        </div>
+
+        <div class="projekt-button-container">
+            <button onclick="openProjektWindow()" type="button">Webseite</button>
+            <button onclick="openGithubWindow()" type="button">Github</button>
+        </div>
+
+        <p>Eine Webapplikation mit verschiedenen Zitaten, die per Knopfdruck angezeigt werden. Zusätzlich ändert sich die Hintergrundfarbe bei jedem Zitatwechsel.
+        </p>
+
+        <article>
+        <h3>Beschreibung</h3>
+        <p>Per Knopfdruck wird sowohl ein neues Zitat als auch eine neue Hintergrundfarbe angezeigt.
+            Beides wird per Zufallsprinzip gewählt, wobei die Zitate aus einer JSON-Datei stammen und die Farben von der Chroma.js-Library generiert werden.
+            Die Zitate habe ich über die Jahre aus Büchern gesammelt und als eine Liste zusammengestellt.
+        </p>
+
+        </article>
+        
+        <article>
+            <h3>Tech Stack</h3>
+            <p>HTML5, CSS3, JavaScript, JSON, Chroma.js-Library</p>
+        </article>
+    </main>
+
+    <script>
+        function openProjektWindow() {
+            window.open('https://inspiration-and-wisdom-quote-machine.netlify.app/');
+            return false;
+        }
+
+        function openGithubWindow() {
+            window.open('https://github.com/MareikeW/quote-machine');
+            return false;
+        }
+    </script>
+</body>
+</html>
