@@ -125,7 +125,7 @@ header a {
     cursor: pointer;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 650px) {
     .hero-section {
         height: 100vh;
         display: flex;
@@ -135,7 +135,7 @@ header a {
 
     .hero-container {
         flex-direction: row;
-        width: 600px;
+        width: 580px;
         margin: 0 auto;
         padding: 0;
         padding-top: 3em;
@@ -173,6 +173,7 @@ header a {
 @media (min-width: 800px) {
     .hero-container {
         width: 700px;
+        margin: 0 auto;
     }
 
     .hero-intro {
