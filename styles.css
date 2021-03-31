@@ -125,7 +125,7 @@ header a {
     cursor: pointer;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 810px) {
     .hero-section {
         height: 100vh;
         display: flex;
@@ -133,9 +133,13 @@ header a {
         align-items: center;
     }
 
+    .hero-intro {
+        padding-right: 0.5em;
+    }
+
     .hero-container {
         flex-direction: row;
-        width: 580px;
+        width: 700px;
         margin: 0 auto;
         padding: 0;
         padding-top: 3em;
@@ -160,24 +164,13 @@ header a {
         margin-right: 0;
         position: relative;
         margin-top: 0;
-        margin-left: -280px;
+        margin-left: -225px;
         margin-bottom: 0;
     }
 
     .click {
         position: absolute;
         bottom: 1em;
-    }
-}
-
-@media (min-width: 800px) {
-    .hero-container {
-        width: 700px;
-        margin: 0 auto;
-    }
-
-    .hero-intro {
-        padding-right: 0.5em;
     }
 }
 
