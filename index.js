@@ -3,9 +3,10 @@ const heroIntro = document.getElementById("hero-intro");
 const heroMenu = document.getElementById("hero-menu");
 const clickPrompt = document.getElementById("click");
 const heroImage = document.getElementById("hero-img");
+
 /* gibt die aktuelle Browserbreite aus */
 let intViewportWidth = window.innerWidth;
-
+ 
 heroSection.addEventListener("click", function change() {
     if (heroIntro.style.display === "none") {
         
