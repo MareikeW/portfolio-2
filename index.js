@@ -6,17 +6,18 @@ const heroImage = document.getElementById("hero-img");
 
 /* gibt die aktuelle Browserbreite aus */
 let intViewportWidth = window.innerWidth;
- 
+
+window.addEventListener('resize', function () { 
+    "use strict";
+    window.location.reload(); 
+});
 heroSection.addEventListener("click", function change() {
+    
+
     if (heroIntro.style.display === "none") {
         
-    } else if (intViewportWidth >= 600 && intViewportWidth < 800) {
-        heroImage.style.marginLeft = "0";
-        heroMenu.style.marginRight = "40px";
-        addTransition();
     }
-    
-    else if (intViewportWidth >= 800){
+    else if (intViewportWidth >= 810){
         heroImage.style.marginLeft = "0";
         heroMenu.style.marginRight = "150px";
         addTransition();

@@ -61,7 +61,7 @@ header a {
 /* Hero */
 
 .hero-section {
-    
+    height: 100vh;
     color: #fff;
     margin: 0 auto;
 }
@@ -134,6 +134,7 @@ header a {
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 100vh;
     }
 
     .hero-intro {
