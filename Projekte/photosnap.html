@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Projekt: Photosnap</title>
+</head>
+<body class="body">
+    <header>
+        <a href="../index.html">
+            M<span></span>W
+        </a>
+    </header>
+    <main>
+        <h1>Projekt: Photosnap</h1>
+        <div class="projekt-img-container">
+            <img src="../images/photosnap_desktop.PNG" alt="Screenshot von der Startseite von Photosnap." class="projekt-img-hero">
+        </div>
+
+        <div class="projekt-button-container">
+            <button onclick="openProjektWindow()" type="button">Webseite</button>
+            <button onclick="openGithubWindow()" type="button">Github</button>
+        </div>
+
+        <p>Meine Lösung von einem anderen Projekt von der Webseite <a href="https://www.frontendmentor.io/challenges/photosnap-multipage-website-nMDSrNmNW" target="_blank" class="link--black">Frontend-Mentor</a>. 
+            Es ist eine 4-seitige Webseite für eine fiktive Plattform, auf der Fotografen ihre Bilder mit anderen teilen können. Die Webseite umfasst eine Startseite und jeweils eine Seite für Stories, Features und Pricing.
+        </p>
+
+        <article>
+        <h3>Beschreibung</h3>
+        <p>In dieser Challenge von Frontend-Mentor sollte man eine Webseite zum Teilen von Fotos nach Designvorlage realisieren. Auf der Startseite werden die einzelnen Bestandteile der Webseite vorgestellt und
+            verlinkt. Es gibt weiter jeweils eine Seite für Stories, Features und Pricing.
+        Zum Anfang bekommt man von Frontend Mentor den Startercode, der die einzelnen Dateien wie homepage.html oder bookingpage.html enthält. Schon vorgegeben sind lediglich das HTML-Grundgerüst und der Text.
+        Weiter gibt es die verschiedenen Bilder für Handy-, Tablet- und Desktopversion sowie die Designvorlage in einer Figma-Datei.
+        </p>
+
+        <p>Die folgenden Anforderungen sollten am Ende erfüllt sein:</p>
+        
+        <ul>
+            <li>Optimales Layout für die jeweilige Bildschirmgröße
+            </li>
+            <li>
+                Hoverstates für alle interaktiven Elemente
+            </li>
+            <li>
+                Nutzung von CSS Grid
+            </li>
+        </ul>
+        </article>
+        
+        <article>
+            <h3>Tech Stack</h3>
+            <p>HTML5, SCSS, JavaScript</p>
+        </article>
+
+        <article>
+            <h3>Schwierigkeiten und Lösungen</h3>
+            <ol>
+                <li><strong>Dunkelheit von Story-Bildern anpassen:</strong> Zuerst habe ich es mit Opacity versucht, aber dann wurde nicht nur das 
+                    Hintergrundbild, sondern auch die Textfarbe dunkler. Dann mit dem ::before-Pseudoelement,
+                    das eine dunklere Schicht auf das Hintergrundbild legt und es somit dunkler macht.
+                    Die Originalbilder in der Figma-Designvorlage sind schärfer und anders geschnitten, weshalb ich keine
+                    1-zu-1 Lösung erzielen konnte.</li>
+                <li><strong>SCSS:</strong> Es war das erste Mal, dass ich mit CSS-Präprozessor SCSS gearbeitet habe. Ich fand es schwierig, Verwendung für Features wie Mixins, Operatoren oder Module zu finden.
+                Aus diesem Grund habe ich nur Gebrauch von Variablen und Nesting gemacht, über die ich in der SCSS-Dokumentation gelesen habe. In der Zukunft würde ich allerdings nochmal gerne mit SCSS 
+            oder Sass arbeiten und mehr darüber lernen.</li>
+            <li><strong>CSS-Grids erstellen:</strong> Zum Lösen dieser Challenge wurde man dazu ermutigt CSS-Grid zu benutzen. Mit den "normalen" grid-templates hatte ich so meine Schwierigkeiten, weshalb
+            ich mehrmals lieber zu den neueren grid-areas gegriffen habe. Ich finde sie einfacher zu benutzen, weil man einfach in der Vorlage angeben kann, wo jedes Element platziert werden soll.
+            Die andere Variante ist etwas kniffliger, weil genaue Abmessungen für jedes Element angegeben werden müssen.</li>
+            </ol>
+        </article>
+    </main>
+
+    <script>
+        function openProjektWindow() {
+            window.open('https://photosnap1.netlify.app/index.html');
+            return false;
+        }
+
+        function openGithubWindow() {
+            window.open('https://github.com/MareikeW/photosnap');
+            return false;
+        }
+    </script>
+</body>
+</html>
