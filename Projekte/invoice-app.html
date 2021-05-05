@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Projekt: Invoice-App</title>
+</head>
+<body class="body">
+    <header>
+        <a href="../index.html">
+            M<span></span>W
+        </a>
+    </header>
+    <main>
+        <h1>Projekt: Invoice-App</h1>
+        <div class="projekt-img-container">
+            <img src="../images/photosnap_desktop.PNG" alt="Screenshot von der Startseite von Photosnap." class="projekt-img-hero">
+        </div>
+
+        <div class="projekt-button-container">
+            <button onclick="openProjektWindow()" type="button">Webseite</button>
+            <button onclick="openGithubWindow()" type="button">Github</button>
+        </div>
+
+        <p>In dieser React-App können Rechnungen angelegt, bearbeitet und auch wieder aus der Datei gelöscht werden. Das Projekt selbst basiert auf einer Challenge von <a href="https://www.frontendmentor.io/challenges/invoice-app-i7KaLTQjl" target="_blank" class="link--black">Frontend-Mentor</a>.</p>
+
+        <article>
+        <h3>Beschreibung</h3>
+        <p>In dieser Frontend-Mentor Challenge war es die Aufgabe, eine Webapplikation zum Organisieren von Rechnungen zu erstellen. 
+            Auf der Startseite ist eine Übersicht mit schon angelegten Rechnungen zu finden. Rechnungen verfügen über einen Status von 
+            „pending“, „draft“ oder „paid“, nach denen im Menü gefiltert werden kann. Klickt man auf eine Rechnung, kommt man auf die 
+            view-invoice-Seite, die alle Informationen anzeigt. Der Status kann hier zu „paid“ geändert werden. Möchte man Änderungen an der 
+            Rechnung vornehmen, gelangt man über den „Edit“-Button auf eine Seite zum Bearbeiten der Angaben. Zurück auf der Startseite gibt 
+            es noch die Möglichkeit, eine neue Rechnung anzulegen. Mit Klick auf den New-Invoice-Button, erscheint eine Formularseite, die 
+            mit den Rechnungsdetails ausgefüllt werden kann. Rechnungen können selbstverständlich auch wieder gelöscht werden. Wie bei jeder 
+            Frontend-Mentor-Challenge, bekommt man alle Icons bzw. Images, den Text und das Design in einer Figma-Datei.
+        </p>
+
+        <p>Die folgenden Anforderungen sollten am Ende erfüllt sein:</p>
+        
+        <ul>
+            <li>Optimales Layout für die jeweilige Bildschirmgröße
+            </li>
+            <li>
+                Hoverstates für alle interaktiven Elemente
+            </li>
+            <li>
+                Erstelle, bearbeite, lösche und zeige alle Rechnungen an
+            </li>
+            <li>
+                Speichere Entwürfe und markiere „pending“-Rechnungen als „paid“
+            </li>
+            <li>
+                Filtere Rechnungen nach Status (draft/pending/paid)
+            </li>
+        </ul>
+        </article>
+        
+        <article>
+            <h3>Tech Stack</h3>
+            <p>HTML5, CSS3, JavaScript (ES6), React.js, React Hooks, React Router, React Context, Styled Components, LocalStorage</p>
+        </article>
+
+        <article>
+            <h3>Schwierigkeiten und Lösungen</h3>
+            <ol>
+                <li><strong>Speicherung von Änderungen:</strong> Die App kommt mit schon vorgegebenen Rechnungen in einer JSON-Datei. 
+                    Um diese Daten ändern zu können, habe ich sie in Context geladen und als Zustand gespeichert. So kann jede Komponente 
+                    Zugriff auf die Daten erhalten. Damit nicht jedes Mal solche Änderungen gelöscht werden, sobald die Seite neu geladen 
+                    wird, wollte ich alle Daten in einer Datenbank speichern. Dazu hatte ich mir Firebase ausgesucht, weil ich das in einem 
+                    Programmierkurs schon einmal ausprobiert hatte. Das Problem war allerdings, dass so jeder Nutzer Daten nicht nur ändern 
+                    und neue Rechnungen anlegen konnte, sondern auch alle Rechnungen löschen könnte. Die nächste Person, die auf diese Webseite 
+                    dann zugreift, würde keine Daten mehr vorfinden. Um dieses Problem zu umgehen, habe ich mich entschieden, LocalStorage zu 
+                    nutzen. Jetzt gehen Daten nicht mehr komplett verloren.  </li>
+                <li><strong>Zugriff auf verschachtelte Objekte:</strong> Die JSON-Datei beinhaltet einen Array mit Objekten. Jedes Objekt steht 
+                    für eine Rechnung. Darüber hinaus sind Keys wie „clientAddress“ noch weiter aufgeteilt in ein Objekt mit „street“, „city“ und 
+                    „country“ Key-Value-Paaren. Wenn man jetzt beispielsweise eine neue „street“ angeben möchte, kann das nicht einfach über eine 
+                    normale onChange-Funktion passieren, die für alle „normalen-nicht-verschachtelten“-Objekte gilt. Es muss also eine neue Funktion 
+                    geschrieben werden, die eine Ebene tiefer geht. Hier konnte ich dann die Objektdestrukturierung aus ES6 einsetzen, mit der ich soz. 
+                    „clientAddress“ aus dem „Oberobjekt“ ziehen und als erste Ebene angeben kann. </li>
+            <li><strong>Anzeige der korrekten Rechnung:</strong> Jede Rechnung verfügt über eine Id. Rechnungen, die neu angelegt werden, 
+                bekommen automatisch bei der Speicherung eine Id zugeordnet. Diese ist einzigartig und lässt sich aus diesem Grund gut zur 
+                Identifikation bzw. Auswahl von einer Rechnung nutzen. In der App habe ich React Router angewandt und konnte dadurch auf die 
+                useParams-Hook zurückgreifen. Zuerst wird in der App()-Funktion der Router angelegt und an entsprechender Stelle (z.B. view-invoice) 
+                der path mit der Id erweitert. Dann wird in viewInvoice.js useParams implementiert und die Parameter-Id daraus destrukturiert. 
+                Auf diesem Wege kann man die Id, die von der Rechnung in der Startseitenübersicht über Props an viewInvoice() weitergegeben wird, 
+                mit dieser Parameter-Id vergleichen. Wenn beide identisch sind, wird die korrekte Rechnung angezeigt.</li>
+            </ol>
+        </article>
+    </main>
+
+    <script>
+        function openProjektWindow() {
+            window.open('https://invoiceapp1.netlify.app/');
+            return false;
+        }
+
+        function openGithubWindow() {
+            window.open('https://github.com/MareikeW/invoice-app');
+            return false;
+        }
+    </script>
+</body>
+</html>
