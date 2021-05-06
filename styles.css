@@ -59,25 +59,18 @@ header a {
 }
 
 /* Hero */
-
-.hero-section {
-    height: 100vh;
-    color: #fff;
-    margin: 0 auto;
-}
-
 .hero-container {
     display: flex;
     flex-direction: column;
-    padding-top: 40px;
+    color: #fff;
 }
 
 .hero-intro span {
     display: block;
 }
 
-.hero-menu span:hover,
-.hero-menu span:focus {
+.hero-intro span:hover,
+.hero-intro span:focus {
     color: #000;
 }
 
@@ -85,96 +78,51 @@ header a {
     width: 300px; 
     border-radius: 50px;
     margin: 0 auto;
-    margin-top: -300px;
     margin-bottom: 20px;
 }
 
-.hero-intro,
-.hero-menu {
+.hero-container p {
+    text-align: center;
+}
+
+.hero-intro {
     text-align: center;
     margin-bottom: 0.5em;
 }
 
-.hero-intro {
-    display: block;
-    z-index: 10;
-}
-
-.hero-menu {
-    font-size: 64px;
-    line-height: 100px;
-    letter-spacing: -0.8px;
-    font-weight: 700;
-    opacity: 0;
-    z-index: 5;
-    pointer-events: none;
-    display: flex;
-    flex-direction: column;
-}
-
-.hero-menu.transitioned {
-    transition: 3s;
-    transition-timing-function: ease-in;
-    color: #fff;
-    opacity: 1;
-    font-size: 64px;
-    pointer-events: auto;
-}
-
-.click {
+.clickToSubPage {
     text-align: center;
-    padding-bottom: 1em;
-    text-decoration: underline;
-    font-weight: 200;
-    cursor: pointer;
+    margin-top: 2em;
+    width: 100vw;
+    height: 100vh;
+}
+  
+.transition-fade {
+    transition: 1s;
+    opacity: 1;
+}
+  
+html.is-animating .transition-fade {
+    opacity: 0;
+    transform: translateY(-200px);
 }
 
 @media (min-width: 810px) {
-    .hero-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-
-    .hero-intro {
-        padding-right: 0.5em;
-    }
-
     .hero-container {
         flex-direction: row;
-        width: 700px;
         margin: 0 auto;
         padding: 0;
-        padding-top: 3em;
-    }
-
-    .hero-intro,
-    .hero-menu {
-        text-align: left;
-        margin-bottom: 0;
-        margin-top: 0.5em;
-        font-size: 80px;
-        line-height: 100px;
-    }
-
-    .hero-menu {
-        padding-top: 0.5em;
+        justify-content: center;
+        align-items: center;
     }
 
     .hero-container img {
-        width: 300px; 
-        border-radius: 50px;
-        margin-right: 0;
-        position: relative;
-        margin-top: 0;
-        margin-left: -225px;
-        margin-bottom: 0;
+        width: auto;
+        height: 500px;
     }
 
-    .click {
-        position: absolute;
-        bottom: 1em;
+    .hero-top {
+        margin-top: 5em;
     }
 }
 
@@ -182,37 +130,7 @@ header a {
     .hero-container {
         width: 800px;
     }
-
-    .hero-intro,
-    .hero-menu {
-        font-size: 100px;
-        line-height: 120px;
-        padding-top: 0;
-    }
-
-    .hero-container img {
-        height: 480px;
-    }
-
-    .hero-menu {
-        width: 400px;
-        padding-bottom: 0;
-    }
-
-    .hero-menu.transitioned {
-        font-size: 100px;
-    }
-
-    .hero-menu * {
-        padding: 0;
-        margin: 0;
-    }
-
-    .hero-intro {
-        margin-top: 0;
-    }
 }
-
 
 
 /* Über */
