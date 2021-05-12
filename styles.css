@@ -242,6 +242,21 @@ html.is-animating .transition-fade {
     color: #000;
 }
 
+.tech-stack-badges {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em auto 5em auto;
+    justify-content: center;
+}
+
+.tech-stack-badges strong {
+    padding: 0.3em 1em;
+    background: rgba(125, 19, 109, 0.7);
+    border-radius: 1em;
+    margin: 0.2em;
+    color: #FFFFFF;
+}
+
 @media (min-width: 800px) {
     .projekte-section {
         max-width: 1000px;
@@ -253,7 +268,8 @@ html.is-animating .transition-fade {
         "image heading"
         "image text"
         "image text"
-        "image text";
+        "image text"
+        "image badges";
         column-gap: 20px;
         margin-top: 3em;
     }
@@ -269,6 +285,12 @@ html.is-animating .transition-fade {
 
     .projekte-item p {
         grid-area: text;
+    }
+
+    .tech-stack-badges {
+        grid-area: badges;
+        margin: 1em 0 5em;
+        justify-content: start;
     }
 }
 
