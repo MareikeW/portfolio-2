@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Projekt: Designo</title>
+</head>
+<body class="body">
+    <header>
+        <a href="../index.html">
+            M<span></span>W
+        </a>
+    </header>
+    <main>
+        <h1>Projekt: Designo</h1>
+        <div class="projekt-img-container">
+            <img src="../images/designo.PNG" alt="Screenshot von der Startseite von der Webseite Designo." class="projekt-img-hero">
+        </div>
+
+        <div class="projekt-button-container">
+            <button onclick="openProjektWindow()" type="button">Webseite</button>
+            <button onclick="openGithubWindow()" type="button">Github</button>
+        </div>
+
+        <p>Eine Webseite für eine fiktive Designagentur mit insgesamt sieben Seiten, basierend auf einer Challenge von <a href="https://www.frontendmentor.io/challenges/designo-multipage-website-G48K6rfUT" target="_blank" class="link--black">Frontend-Mentor</a>.</p>
+
+        <article>
+        <h3>Beschreibung</h3>
+        <p>Dies ist meine Lösung zu einer weiteren Frontend-Mentor-Challenge: "Designo designo-multipage-website". 
+            Mithilfe eines JavaScript-Frameworks bzw. einer Library soll das Figma-Design umgesetzt werden. Hierzu habe ich die React-Library gewählt.
+            Die Webseite umfasst ein Hamburger-Menu in der Mobile-Version, eine Startseite, drei Seiten zu den Themen "Web Design", "App Design" und "Graphic Design"
+            Darüber hinaus gibt es noch eine Seite mit Informationen über die Agentur, eine Seite mit einer Übersicht von den verschiedenen Standorten und eine Seite mit Kontaktformular.
+        </p>
+
+        <p>Die folgenden Anforderungen sollten am Ende erfüllt sein:</p>
+        
+        <ul>
+            <li>Optimales Layout für die jeweilige Bildschirmgröße
+            </li>
+            <li>
+                Hoverstates für alle interaktiven Elemente
+            </li>
+            <li>
+                Formularvalidierung
+            </li>
+        </ul>
+        </article>
+        
+        <article>
+            <h3>Tech Stack</h3>
+            <p>HTML5, CSS3, JavaScript (ES6), React.js, React Hooks, React Router, Styled Components</p>
+        </article>
+
+        <article>
+            <h3>Schwierigkeiten und Lösungen</h3>
+            <ol>
+                <li><strong>Formularvalidierung:</strong> Die Inputfelder im Kontaktformular sollten ihre Text- und Randfarben ändern, sobald ein User anfängt, 
+                    es auszufüllen. Außerdem sollte noch ein Icon mit einem Ausrufezeichen und die Wörter "Can't be empty" angezeigt werden, wenn ein Inputfeld beim Abschicken nicht ausgefüllt ist.
+                    Zunächst habe ich die Werte jedes Inputs in einem Zustand gespeichert. Der Anfangszustand war jeweils ein leerer String. Über ein onChange-Event bei jedem Inputfeld konnte ich 
+                    dann diesen Zustand mit den neu eingetippten Werten aktualisieren. Die Error-Meldung habe ich ebenfalls über Zustände organisiert, die jeweils prüfen, ob ein Inputfeld leer oder nicht ist.
+                    Dieser Vorgang wird durch eine handleSubmit-Funktion beim Auslösen des onSubmit-Events durchgeführt.</li>
+                <li><strong>Mobile-Version von der Navigation:</strong> In der Mobile-Version sollte die Navigation versteckt und nur über einen Hamburger-Button erreichbar sein.
+                    Wenn man auf diesen klickt, kommt das Navigationsmenu von der linken Seite ins Bild gefahren. Hierzu habe ich den Checkbox-Trick verwendet. Das Inputfeld vom Typ "checkbox" wird
+                    mit einem Label verknüpft. Dieses Label beinhaltet dann das Icon, in diesem Fall sogar zwei Icons: Hamburger-Icon und X-Icon. Ersteres wird angezeigt, wenn das Menü noch nicht sichtbar ist. Letzteres
+                    wenn das Menü sichtbar ist und wieder geschlossen werden kann. Dazu habe ich einen Ternary-Operator benutzt, der das entsprechende Icon bzw. die Komponente anzeigt. Die Änderung des Icons findet über 
+                    einen Zustand statt, in dem gespeichert wird, ob die Checkbox geklickt oder ungeklickt ist.</li>
+            </ol>
+        </article>
+    </main>
+
+    <script>
+        function openProjektWindow() {
+            window.open('https://designo-online.netlify.app/');
+            return false;
+        }
+
+        function openGithubWindow() {
+            window.open('https://github.com/MareikeW/designo-multipage-website');
+            return false;
+        }
+    </script>
+</body>
+</html>
