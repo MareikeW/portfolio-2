@@ -419,3 +419,8 @@ article {
 .icons-list a {
     padding: 1em;
 }
+
+.icons-list img:hover,
+.icons-list img:focus {
+    transform: scale(1.2);
+}
