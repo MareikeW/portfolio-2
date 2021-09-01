@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Projekt: FinCalc</title>
+</head>
+<body class="body">
+    <header>
+        <a href="../index.html">
+            M<span></span>W
+        </a>
+    </header>
+    <main>
+        <h1>Projekt: FinCalc - Finanzrechner</h1>
+        <div class="projekt-img-container">
+            <img src="../images/fincalc.PNG" alt="Screenshot von der Startseite FinCalc" class="projekt-img-hero">
+        </div>
+
+        <div class="projekt-button-container">
+            <button onclick="openProjektWindow()" type="button">Webseite</button>
+            <button onclick="openGithubWindow()" type="button">Github</button>
+        </div>
+
+        
+        <p>Im Rahmen eines Gruppenprojektes ist diese Webseite entstanden. Zusammen mit zwei Gleichgesinnten aus den USA und Indien habe ich dieses Tool für die Finanzplanung erstellt.
+            Meine Aufgaben im Projekt waren: Finden von Gruppenmitgliedern, Planung und Organisation des Projektes, Erstellung des Github-Repos, Aufbau des Grundgerüst der Webseite (React.js + React-Router), sowie Erstellung des Budget Planners (+ Diagramm) und des Savings Calculators (+ Diagramm & Tabelle).
+        </p>
+
+        <article>
+        <h3>Beschreibung</h3>
+        <p>
+            Auf dieser Webseite können Nutzer vier Tools für ihre Finanzplanung finden: 
+        </p>
+        
+        <ol>
+            <li><strong>Savings Calculator:</strong> Ein Zinseszinsrechner für Guthabenzinsen auf Basis von Anfangskapital, 
+                Sparrate, Zinssatz, Ansparzeit in Jahren und Sparintervall. Das Intervall der Sparraten kann zwischen 
+                monatlich und jährlich gewählt werden. Anhand der eingegebenen Daten ermittelt der Sparrechner das zu 
+                erzielende jährliche Endkapital inklusive Zinsen, die Zinsen und das Anfangskapital. 
+                Ein Liniendiagramm zeigt den Verlauf der Guthabenentwicklung über die Jahre an und in einer Tabelle werden nochmal alle Ergebnisse pro Jahr angegeben.
+            </li>
+            <li>
+                <strong>Compound Interest Calculator:</strong> Ebenfalls ein Zinseszinsrechner, jedoch für einmalige Anlagen. 
+                Zinsgutschriften werden dem angelegten Kapital gutgeschrieben und dementsprechend mitverzinst. 
+                Wie beim Sparrechner wird auch hier der Verlauf der Guthabenentwicklung in einem Liniendiagramm dargestellt und die Ergebnisse pro Jahr in einer Tabelle.
+            </li>
+            <li>
+                <strong>Budget Planner:</strong> Nutzer können hier ihr monatliches Budget planen. 
+                Der Planner wird unterteilt in verschiedene Einnahmen- und Ausgabenpositionen wie "Savings", "Transport", etc. 
+                Nach Eingabebestätigung wird die Differenz der Einnahmen und Ausgaben angegeben 
+                sowie das Ergebnis in einem Tortendiagramm angezeigt.
+            </li>
+            <li>
+                <strong>Retirement Savings:</strong> Berechnet wie viel ein Sparer monatlich bzw. jährlich anlegen muss, damit sein Wunschbetrag bis zu Beginn seiner Rente erreicht wird.
+            </li>
+        </ol>
+        </article>
+        
+        <article>
+            <h3>Tech Stack</h3>
+            <p>SCSS, React (Hooks, Router), Chart.js-Bibliothek/React-Chart.js-2-Bibliothek, Git/Github</p>
+            <p>
+                <div class="arrow-description">
+                    <img src="https://img.icons8.com/fluent/48/000000/long-arrow-up.png" class="purple-arrow"/>
+                    <span>Chart.js-Bibliothek:</span>
+                </div>
+                <ul>
+                    <li>Einfacher Weg Graphen in einem Projekt zu erstellen</li>
+                    <li>Open Source</li>
+                    <li>Diagramm wird auf einem HTML5 &lt;canvas&gt; dargestellt</li>
+                    <li>responsive</li>
+                    <li>7 Diagrammtypen: Linien-, Balken-, Radar-, Donut-/Torten-, Polar Area-, Blasen- und Streudiagramm</li>
+                </ul>
+            </p>
+        </article>
+    </main>
+
+    <script>
+        function openProjektWindow() {
+            window.open('https://fincalc-project.netlify.app/');
+            return false;
+        }
+
+        function openGithubWindow() {
+            window.open('https://github.com/MareikeW/fincalc-project');
+            return false;
+        }
+    </script>
+</body>
+</html>
